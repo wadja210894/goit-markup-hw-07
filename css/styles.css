@@ -3,6 +3,7 @@
   --secondary-text-color: #757575;
   --accent-color: #2196f3;
   --white-text: #ffffff;
+  --primary-bacground-color: #ffffff;
   --secondary-bacground-color: #f5f4fa;
   --third-bacground-color: #afb1b8;
 }
@@ -10,9 +11,10 @@
 body {
   color: var(--primary-text-color);
   font-family: "Roboto", sans-serif;
-  background-color: var(--white-text);
+  background-color: var(--primary-bacground-color);
   font-size: 14px;
   letter-spacing: 0.03em;
+  font-weight: 400;
 }
 .list {
   list-style-type: none;
@@ -223,7 +225,6 @@ body {
 
   font-size: 14px;
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 .about-work {
@@ -251,7 +252,6 @@ body {
   font-size: 14px;
   line-height: calc(16 / 14);
   text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-text);
 }
@@ -364,7 +364,6 @@ body {
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
-  letter-spacing: 0.03em;
 }
 .clients-list {
   display: flex;
@@ -450,7 +449,6 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-text);
 }
@@ -488,7 +486,6 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-text);
 }
@@ -508,10 +505,8 @@ body {
   outline: none;
 }
 .input-email::placeholder {
-  font-weight: 400;
   font-size: 16px;
   line-height: calc(20 / 16);
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 .sing-up-button {
@@ -721,19 +716,17 @@ body {
   font-size: 20px;
   line-height: calc(23 / 20);
   text-align: center;
-  letter-spacing: 0.03em;
 }
 .form-field {
   display: block;
   margin-bottom: 4px;
 
-  font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
 }
-.wrapper-input{
+.wrapper-input {
   position: relative;
   margin-bottom: 10px;
 }
@@ -745,7 +738,7 @@ body {
   margin-left: 15px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input {  
+.form-input {
   padding: 12px 0px 12px 0px;
   padding-left: 42px;
 
@@ -759,7 +752,7 @@ body {
   outline: none;
   border: 1px solid var(--accent-color);
 }
-.form-input:focus + .modal-icon{
+.form-input:focus + .modal-icon {
   fill: var(--accent-color);
 }
 .form-input-comment {
@@ -777,7 +770,6 @@ body {
   border: 1px solid var(--accent-color);
 }
 .form-input-comment::placeholder {
-  font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
@@ -793,10 +785,8 @@ body {
   display: flex;
   align-items: center;
 
-  font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 .form-input-checkbox {
