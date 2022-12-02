@@ -41,6 +41,11 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* Site header */
 
@@ -53,7 +58,7 @@ body {
   display: flex;
   align-items: center;
 }
-.site-nav__logo {
+.header__logo {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   font-style: normal;
@@ -61,10 +66,10 @@ body {
   font-size: 26px;
   line-height: calc(31 / 26);
 }
-.site-nav__logo--first {
+.header__logo--first {
   color: var(--accent-color);
 }
-.site-nav__logo--second {
+.header__logo--second {
   color: var(--primary-text-color);
 }
 
@@ -94,6 +99,20 @@ body {
 .site-nav__link:focus {
   color: var(--accent-color);
 }
+.site-nav__link--curent {
+  color: var(--accent-color);
+  position: relative;
+}
+.site-nav__link--curent::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  bottom: -1px;
+  right: 0;
+}
 .contact {
   display: flex;
   margin-left: auto;
@@ -122,20 +141,6 @@ body {
 .contact__link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
-}
-.site-nav__link--curent {
-  color: var(--accent-color);
-  position: relative;
-}
-.site-nav__link--curent::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 4px;
-  bottom: -1px;
-  right: 0;
 }
 
 /* Section hero */
@@ -421,13 +426,10 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.footer-information {
+.site-footer__box {
   margin-right: 70px;
 }
-.site-footer__logo {
-  display: block;
-  margin-bottom: 20px;
-
+.footer__logo {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   font-style: normal;
@@ -435,11 +437,14 @@ body {
   font-size: 26px;
   line-height: calc(31 / 26);
 }
-.site-footer__logo--first {
+.footer__logo--first {
   color: var(--accent-color);
 }
-.site-footer__logo--second {
+.footer__logo--second {
   color: var(--white-text);
+}
+.addres {
+  margin-top: 20px;
 }
 .addres__addres {
   line-height: calc(24 / 14);
@@ -582,14 +587,6 @@ body {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-.modal__backdrop.is-hidden .modal__window {
-  transform: translate(-50%, -50%) scale(0.7);
-}
 .modal__window {
   width: 528px;
   height: 581px;
@@ -602,6 +599,9 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+.modal__backdrop.is-hidden .modal__window {
+  transform: translate(-50%, -50%) scale(0.7);
 }
 .modal__close-sign {
   position: absolute;
@@ -692,13 +692,13 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.checkbox {
+.form__checkbox {
   position: relative;
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
-.checkbox__label {
+.form__checkbox-label {
   display: flex;
   align-items: center;
 
@@ -706,10 +706,10 @@ body {
   line-height: calc(24 / 14);
   color: var(--secondary-text-color);
 }
-.checkbox__input {
+.form__checkbox-input {
   appearance: none;
 }
-.checkbox__icon {
+.form__checkbox-icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -717,7 +717,7 @@ body {
   fill: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox__wrapper {
+.form__checkbox-wrapper {
   margin-right: 7px;
   position: relative;
   width: 16px;
@@ -726,18 +726,18 @@ body {
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox__input:checked + .checkbox__label .checkbox__wrapper {
+.form__checkbox-input:checked + .form__checkbox-label .form__checkbox-wrapper {
   background-color: var(--accent-color);
   border: none;
 }
-.checkbox__input:checked + .checkbox__label .checkbox__icon {
+.form__checkbox-input:checked + .form__checkbox-label .form__checkbox-icon {
   fill: var(--white-text);
 }
-.modal__wrapper {
+.form__btn-wrap {
   display: flex;
   justify-content: center;
 }
-.modal__button {
+.form__button {
   width: 200px;
   height: 50px;
   font-weight: 700;
@@ -751,8 +751,8 @@ body {
   border-radius: 4px;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal__button:hover,
-.modal__button:focus {
+.form__button:hover,
+.form__button:focus {
   background: #188ce8;
 }
 

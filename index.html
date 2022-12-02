@@ -22,9 +22,9 @@
     <header class="site-header">
       <div class="site-header__container container">
         <nav class="site-nav">
-          <a class="site-nav__logo" href="./index.html"
-            ><span class="site-nav__logo--first">Web</span
-            ><span class="site-nav__logo--second">Studio</span></a
+          <a class="header__logo" href="./index.html"
+            ><span class="header__logo header__logo--first">Web</span
+            ><span class="header__logo header__logo--second">Studio</span></a
           >
           <ul class="site-nav__list list">
             <li class="site-nav__item">
@@ -399,10 +399,10 @@
     <footer class="site-footer">
       <div class="site-footer__container container">
         <div class="site-footer__wrapper">
-          <div class="footer-information">
-            <a class="site-footer__logo" href="./index.html"
-              ><span class="site-footer__logo--first">Web</span
-              ><span class="site-footer__logo--second">Studio</span></a
+          <div class="site-footer__box">
+            <a class="footer__logo" href="./index.html"
+              ><span class="footer__logo footer__logo--first">Web</span
+              ><span class="footer__logo footer__logo--second">Studio</span></a
             >
             <address class="addres">
               <ul class="addres__list list">
@@ -529,24 +529,24 @@
               placeholder="Введіть текст"
               class="form__input--comment"
             ></textarea>
-            <div class="checkbox">
+            <div class="form__checkbox">
               <input
                 type="checkbox"
                 name="checkbox"
                 id="checkbox"
-                class="checkbox__input"
+                class="form__checkbox-input"
                 required
               />
-              <label for="checkbox" class="checkbox__label"
-                ><span class="checkbox__wrapper"
-                  ><svg class="checkbox__icon" width="13" height="9">
+              <label for="checkbox" class="form__checkbox-label"
+                ><span class="form__checkbox-wrapper"
+                  ><svg class="form__checkbox-icon" width="13" height="9">
                     <use href="./images/icons.svg#icon-check"></use></svg></span
                 >Погоджуюся з розсилкою та приймаю&nbsp;
                 <a href="#">Умови договору</a>
               </label>
             </div>
-            <div class="modal__wrapper">
-              <button type="submit" class="modal__button">Відправити</button>
+            <div class="form__btn-wrap">
+              <button type="submit" class="form__button">Відправити</button>
             </div>
           </form>
         </div>
